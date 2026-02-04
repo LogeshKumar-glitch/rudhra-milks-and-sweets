@@ -1,13 +1,25 @@
-import Products from "./pages/Products";
+import products from "./data/productsData";
+import ProductCard from "./components/ProductCard";
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      <h1>Rudhra Milks & Sweets</h1>
-      <p>Fresh Milk • Butter • Ghee • Palkova</p>
+    <>
+      <div className="header">
+        <h1>Rudhra Milks & Sweets</h1>
+        <p>Fresh Milk • Butter • Ghee • Palkova</p>
+      </div>
 
-      <Products />
-    </div>
+      <div className="section">
+        <h2>Our Products</h2>
+
+        <div className="products">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 
