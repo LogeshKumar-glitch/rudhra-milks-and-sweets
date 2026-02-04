@@ -9,7 +9,7 @@ Quantity: 1`
     );
 
     window.open(
-      `https://wa.me/919500559110?text=${message}`,
+      `https://wa.me/919578518301?text=${message}`,
       "_blank"
     );
   };
